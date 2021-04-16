@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>login quest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(/0331/loginicon/sky-5534319_1920.jpg);
+            animation: movebg 10s linear infinite;
+            /*movebg 를 사용하고 10초에 걸쳐 무한반복*/
+            animation-direction: ;
+            background-size: 100%;
+            background-repeat: no-repeat;     
+        }
+
+        @keyframes movebg {
+            0% {
+                background-position: right;
+            }
+
+            100% {
+                background-position: left;
+            }
+        }
+
+        section {
+            margin-top: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        ul {
+            text-align: center;
+            padding-top: 50px 50px;
+            margin: 0 auto;
+            width: 600px;
+            height: 350px;
+            list-style-type: none;
+        }
+
+        li>input {
+
+
+            padding-left: 50px;
+            margin-top: 10px;
+            width: 445px;
+            height: 50px;
+            border: none;
+            outline: none;
+
+        }
+
+        li>button {
+            font-size: 20px;
+            color: white;
+            background-color: skyblue;
+            margin-top: 10px;
+            width: 500px;
+            height: 70px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .id {
+            background-image: url(/0331/loginicon/iconfinder_User_4200769.png);
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position: 12.5px center;
+        }
+
+        .password {
+            background-image: url(/0331/loginicon/iconfinder_key_383118.png);
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position: 12.5px center;
+        }
+
+        button:hover {
+            color: black;
+            box-shadow: skyblue 0px 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <form action="" method="post">
+
+            <ul>
+                <h2>로그인 페이지</h2>
+                <li><label for="id"></label></li>
+                <li><input type="id" placeholder="아이디를 입력하세요" class="id"></li>
+                <li><label for="password"></label></li>
+                <li><input type="password" placeholder="암호를 입력하세요" class="password"></li>
+                <li><button>로그인</button></li>
+                <li><button type="button">회원가입</button></li>
+            </ul>
+
+        </form>
+    </section>
+
+</body>
+
+</html>

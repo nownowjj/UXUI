@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>테두리</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    /* border: 선두께 선종류 색상; 상하좌우 동일한 디자인 */
+    /* 선종류: solid, dashed, dotted, inset, outset */
+    .border1{
+        border:20px inset blue;    
+    }
+    .border2{
+        border-width: 20px;
+        border-style: outset;
+        border-color: blueviolet;
+    }
+    .border3{
+        border-left:  5px solid yellowgreen;
+        /* border-left-color: yellowgreen
+        border-left-width:5px;
+        border-left-style:outset; */
+    }
+    .border4{
+        border:20px solid coral;
+        border-radius: 30px;
+    }
+    .border5{
+      width: 500px;
+      height: 100px;
+      border: 1px solid skyblue;
+      margin: 10px;
+      background-color: skyblue;
+      border-radius: 50px;    
+    }
+    .border6{
+      width: 500px;
+      height: 500px;
+      border: 1px solid rosybrown;
+      margin: 100px;
+      background-color: rosybrown;
+      border-radius: 250px;
+      box-shadow:0px 0px 100px inset brown;
+    }
+    .border7{
+      width: 300px;
+      height: 300px;
+      border: 1px solid red;
+      border-bottom-left-radius:20px;
+      border-bottom-right-radius:40px;
+      border-top-right-radius:60px;
+      border-top-left-radius: 80px;   
+    }
+
+        
+    
+    </style>
+
+</head>
+<body>
+<div class="border1"></div>
+<hr>
+<div class="border2"></div>
+<hr>
+<div class="border3"></div>
+<hr>
+<div class="border4"></div>
+<hr>
+<div class="border5"></div>
+<hr>
+<div class="border6"></div>
+<hr>
+<div class="border7"></div>
+</body>
+</html>

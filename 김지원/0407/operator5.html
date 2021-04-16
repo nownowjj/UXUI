@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    //논리연산자 : AND OR NOT
+    // &&(AND): 양쪽의 비교연산 결과가 true 일때만 true
+    // || (OR): 양쪽의 비교연산 결과가 둘중하나가 true면 true
+    // ! (NOT) : true면 false , false 면 true 로 바꿈
+    var n1 =10;
+    var n2 =20;
+    var result;
+    result= n1>=10 && n2<=20;
+    document.write(result,"<br>");
+    result= n1< 10 && n2>= 20;
+    document.write(result,"<hr>")
+    result= n1>= 10 || n2 <= 20;
+    document.write(result,"<br>")
+    result= n1< 10 || n2>= 20;
+    document.write(result,"<hr>")
+    document.write(!result,"<br>")
+    document.write(!1,"<br>")
+    document.write(!100,"<br>") //1은 true, 0은 false 0이 아닌 모든것은 true 판단
+    document.write(!0,"<br>")
+</script>
+</head>
+<body>
+    
+</body>
+</html>

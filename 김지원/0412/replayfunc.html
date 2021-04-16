@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    function sum(a,b){
+        //일을 실해하는 영역
+        return a+b;
+    }
+
+    var result=sum(10,30);
+    document.write(result,"<hr>");
+    //매개변수 X , return:O
+    function inputNumber(){
+        var result=Number(prompt("숫자 입력"));
+        return result;
+    }
+    //매개변수 O return X
+     function printResult(result){
+         document.write("결과 값:" + result);
+     }
+     //매개변수 X return X
+     function init(){
+         var n1=inputNumber();
+         var n2=inputNumber();
+         var result=sum(n1,n2);
+         printResult(result);
+  } 
+  init();
+</script>
+</head>
+<body>
+    
+</body>
+</html>

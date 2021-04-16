@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style-type: none;
+        width: 1000px;
+        margin: 0 auto; /*웹 중앙으로 마진을 줌*/
+        padding: 10px; /*위에서 10px만큼 뛰웠음*/
+
+    }
+    li{
+        box-sizing: border-box;
+        width: 200px;
+        float: left;
+        border: 1px solid rgba(0, 0, 0, 0.336);
+        text-align: center;
+        background-color: rgba(128, 128, 128, 0.212);
+    }
+    a{
+     text-decoration: none;
+     color: black;
+     padding:10px 0px;
+     width: 100%;
+     display: inline-block;
+
+    }
+    .left{
+        border-top-left-radius:10px ;
+        border-bottom-left-radius:10px ;}
+
+    .right{
+        border-top-right-radius:10px ;
+        border-bottom-right-radius:10px ;
+    }
+
+</style>
+    
+</head>
+<body>
+<ul>
+    <li class="left"><a href="#" title="메인페이지 이동">홈</a></li>
+    <li><a href="#" title="회사소개">회사소개</a></li>
+    <li><a href="#" title="고객센터">고객센터</a></li>
+    <li><a href="#" title="오시는길">오시는길</a></li>
+    <li class="right"><a href="#" title="주문페이지">주문하기</a></li>
+</ul>
+    
+</body>
+</html>

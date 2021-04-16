@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+
+<style>
+*{margin: 0;padding: 0;}
+table{border-collapse: collapse;
+      width:1000px}
+
+tr{border-top:1px solid rgba(128, 128, 128, 0.377)}
+
+td,th{padding: 5px;}
+
+.gray{background-color: rgba(128, 128, 128, 0.575);}
+
+.title{width:600px;}
+
+td{text-align: center;}
+
+.label{border-radius: 16px;
+padding: 1px 3px;
+background-color: green;
+color: white;
+font-size: 8px;
+font-weight: bold;}
+
+.page{text-align: right;
+      padding-right: 50px;}
+
+button{
+    width: 40px;
+    height: 40px;
+    background-color: #e8e8e8;
+    border: none;
+}
+.current_page{}
+.writer{text-align: right;}
+
+.btn_writer{width: 100px;
+            background-color: rgb(80, 147, 223);}
+
+.two{background-color: rgb(80, 147, 223)}
+
+.right{padding:0px 100px;}
+</style>
+
+</head>
+<body>
+    <table >   <caption>게시판</caption>
+        <tr class="gray">
+            <th>No.</th>
+            <th class="title">title</th>
+            <th>count</th>
+            <th>date</th>
+            <th>좋아요</th>
+            <th>싫어요</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>제목<span class="label">N</span></th>
+            <th>0</th>
+            <th>2010-11-19</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>제목</th>
+            <th>2</th>
+            <th>2010-11-19</th>
+            <th>40</th>
+            <th>42</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>제목</th>
+            <th>345</th>
+            <th>2010-11-19</th>
+            <th>112</th>
+            <th>42</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <th>제목</th>
+            <th>456</th>
+            <th>2010-11-19</th>
+            <th>44</th>
+            <th>457</th>
+        </tr>
+    
+        <tr>
+            <td colspan="3" class="page right">
+                <button>←</button>
+                <button>1</button>
+                <button class="two">2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>→</button>
+            </td>
+            <td colspan="3" class="writer">
+                <button class="btn_writer">글쓰기</button>
+            </td>
+        </tr>
+   
+     </table>
+
+
+
+
+</body>
+</html>

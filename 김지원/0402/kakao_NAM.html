@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    *{margin: 0; padding: 0;}
+h1{
+    text-align: center;
+}
+.container{
+    width: 600px;
+    height: 800px;
+    border: 1px solid;
+    margin: 0 auto;
+    padding:40px 60px;
+}
+ul{
+    list-style-type: none;
+}
+h2{
+    margin-bottom: 20px;
+}
+#id{
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+}
+.idid{
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.id_ul{
+    list-style-type: circle;
+    font-size: 14px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+span{float: right;}
+.pass{
+    margin-top: 30px; 
+}
+.pass input{
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30px;
+    text-align: left;
+    width: 100%;
+}
+.nick{
+    margin-top: 30px;
+}
+
+</style>
+</head>
+<body>
+    <h1>KaKao</h1>
+    <div class="container">
+        <h2>카카오 계정 정보를 입력해 주세요.</h2>
+        <form action="" method="post">
+            <ul>
+             <li><label for="id">카카오계정 이메일</label></li>
+             <li class="idid"><input type="text" name="id" id="id" placeholder="아이디 입력"><span>@KaKao.com</span></li>
+               <ul class="id_ul">
+                 <li>입력한 카카오메일로 카카오계정에 로그인할 수 있습니다</li>
+                 <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해 주세요</li>
+                 <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+               </ul>
+              <div class="pass">
+               <li><label for="pass">비밀번호</label></li>
+               <li><input type="password" name="password" id="pass" placeholder="비밀번호(8~32자리)" maxlength="32"></li>
+               <li><input type="password" id="pass_chk" placeholder="비밀번호 재입력" maxlength="32"></li>
+              </div>
+             <div class="nick">
+               <li><label for="nick">닉네임</label></li>
+               <li><input type="text" name="nick" id="nick" placeholder="닉네임을 입력해 주세요"><span>0/20</span></li>
+             </div>
+               <li><label for="tel">전화번호</label></li>
+               <li><select name="gcode" id="gcode">
+                   <option value="82">+82</option>
+                   <option value="1">+1</option>
+                   <option value="84">+84</option>
+                   <option value="55">+55</option>
+               </select><input type="text" id="tel" name="tel" placeholder="전화번호">
+               </li>
+               <li><button type="button">인증번호 전송</button></li>
+               <li><button>다음</button></li>
+            </ul>
+        </form>
+    
+        </div>
+
+</body>
+</html>

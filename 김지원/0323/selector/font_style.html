@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>글꼴 꾸미기</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+ <style> @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+ /*구글 폰트에서 가져옴*/
+ .color{
+    color: red;/*폰트 색상
+  rgb(0~255,0~255,0~255
+  FF0011-->html 색상표
+*/
+}
+
+ .italic{font-style: italic;}/* 기울임꼴: italic*/
+
+ 
+ .line{text-decoration: line-through;}/* 텍스트 라인 긋기: underline,overline,line-through
+    줄 색깔은 글꼴 색깔로 지정됨*/
+
+ a{text-decoration: none;} /*하이퍼링크 밑줄 삭제 할 수 있음*/
+ 
+ .bold{
+     font-weight: bold; /*글꼴 두껍게*/
+ }
+.font{
+    /* font-family:'궁서','바탕'; */
+    font-family: 'Hi Melody', cursive;/*폰트:첫번째 메인 폰트,서브 폰트(사용자 컴퓨터에 메인 폰트가 없을때)*/
+}
+@font-face {
+    font-family:'bp' ;
+    src: url(/0323/resource/Black_And_White_Picture/BlackAndWhitePicture-Regular.ttf);
+}
+.new_font{
+    font-family:'bp';
+}
+@font-face {
+    font-family: face;
+    src: url();
+}
+html{font-size: 20px;}
+ </style>
+
+
+</head>
+
+<body>
+    <a href="#">하이퍼링크</a>
+    <p class="color">국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.</p>
+    <p class="italic">국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</p>
+    <p class="line color">헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다.</p>
+    <p class="bold new_font">감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.</p>
+    <p class="font new_font">중앙선거관리위원회는 법령의 범위안에서 선거관리·국민투표관리 또는 정당사무에 관한 규칙을 제정할 수 있으며, 법률에 저촉되지 아니하는 범위안에서 내부규율에 관한 규칙을 제정할 수 있다.</p>
+    <p class="font"> 가나다라마바사 아자차카 타파하 abcdefghizklmnopqrstuvwxyz</p>
+
+</body>
+
+</html>

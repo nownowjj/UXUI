@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>transition효과</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    a:link,a:visited{
+        width: 100px;
+        height: 100px;
+        display:inline-block;
+        background-size: 90px;
+        background-image: url(/icon/youtube.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        transition-duration: 0.5s;  /*바뀌는 시간*/
+    
+    }
+    a:hover{     /*a태그에 마우스를 올렸을때*/
+        background-color:green(255, 105, 180, 0.479);  
+        border-radius: 50px;
+        background-size: 90px;
+        background-image: url(/icon/home.png);    /*마우스를 올리면 다른 이미지로 변환*/
+    }
+    #box{
+        width: 150px;
+        height: 150px;
+        background-size: 100px;
+        background-image: url(/icon/friend.png);
+        background-position: center;
+        background-repeat:no-repeat;
+        
+    }
+    #box{             /*박스에 마우스를 올리면 키프레임에 ani1에 이미지로 변환시키고 1초에 걸쳐 반복*/
+        animation-name: ani2;
+        animation-duration: 5s;
+        animation-iteration-count:infinite;   /*무한대 반복*/
+        animation-direction:alternate;
+    }
+    /*  Keyframes 애니메이션명{}   */
+    @keyframes ani1{
+        from{
+            background-image: url(/icon/friend.png);
+        }
+        to{
+            background-image: url(/icon/community.png);
+        }
+    }
+    
+    @keyframes ani2{
+        0%{
+            margin-left:0px
+        }
+        50%{
+            margin-left: 885px;
+        }
+        100%{
+            margin-left: 1845px;
+        }
+    }
+
+</style>
+</head>
+<body>
+<a href="https://www.youtube.com/"></a>
+<div id="box"></div>
+    
+</body>
+</html>

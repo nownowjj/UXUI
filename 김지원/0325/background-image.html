@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    .box1{
+        width: 1000px;
+        height: 700px;
+        border: 20px dashed black;
+        padding: 50px;
+        background-image: url('/0325/img/tree-736885_640.jpg');
+        background-repeat: no-repeat; /*no-repeat,      repeat-x ,          repeat-y ,          repeat          */
+                                     /* 반복안함   ,가로방향으로 반복,  세로방향으로 반복,  가로세로 반복,기본값    */
+        background-clip: ;
+        background-size:cover contain ;    
+        /*   배경이미지 사이즈 가로 세로 픽셀,% 로 줄수 있음   cover , contain*/
+        /* cover: 가로 세로 중 작은 비율로 계산해서 전부 채움 이미지가 잘림
+        contain: 가로 세로 중 큰 비율로 계산해서 채움,이미지가 영역 전체를 채우지는 못함*/
+        background-size: 700px;
+        /*배경이미지 위치 잡을때 px, % 단위로 좌표 설정 
+          키워드를 이용해서 top center bottom right left */
+        background-position: top left;
+        /* 배경 이미지 위치 설정 할수 있음 */
+        background-origin: border-box;
+        /* border-box, padding-box, content-box */
+        }                                  
+       
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

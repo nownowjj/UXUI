@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>폼 태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <form action="" method="get">
+        가입 약관 동의 여부:
+        <!-- radio button은 여러개 중 하나의 항목만 선택할때 쓰임 
+          name 속성 값을 동일하게 설정해서
+         radio button을 그룹 묶어야 하나만 선택가능-->
+
+        <input type="radio" name="agree" value="yes">예
+        <input type="radio" name="agree" value="no">아니오
+        <Br>
+        <!-- name을 똑같이 하면 그룹 설정이 되어서 중복 체크 안됨! -->
+        날짜:<input type="date" name="date">
+        <br>
+        수량:<input type="number" name="" id="" min="0" step="1000"><!--min, max로 최소,최대값 지정가능-->
+                                                   <!--step은 버튼 누를때 몇씩 증가시키는지 3이면 & 3,6,9~~-->
+        <br>
+        
+        첨부파일:<input type="file" name="" id="">
+        <br>
+        
+        슬라이더:<input type="range" name="" id="" value="1"> 
+        <br>                                       <!--value 0부터1까지 설정가능-->
+        color picker:<input type="color" name="" id="">
+        <br>
+        <select name="sel"> <!--select 에서 전송되는 값은 option의 value 속성-->
+         <option value="F" >--선택--</option> <!--selected 이용해서 기본적으로 선택항목 지정가능-->
+         <option value="A" >선택1</option> 
+         <option value="B" >선택2</option>
+         <option value="C">선택3</option>
+         <option value="D">선택4</option>
+        </select>
+        <br>
+        <!-- input 태그의 텍스트 상자에서 쓰던 속성을 전부 사용이 가능 -->
+        <!-- cols: 컬럼 개수, rows: 라인수 -->
+        <!-- textarea 태그에서는 태그안에 내용을 넣지 않음-넣으면 넣은 내용이 그대로 미리 입력되어 있음 -->
+        <textarea name="" id="" cols="30" rows="10" placeholder="텍스트를 입력하세요"></textarea>
+         <button type="submit">전송</button>
+        <!--input type="submit"-->
+        <hr>
+
+          ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        <!--연습 페이지-->
+        <h1>게시판 글쓰기 페이지</h1>
+        
+        <form action="" method="GET">
+            &nbsp<b>제목</b> &nbsp&nbsp <input type="text" placeholder="제목을 입력해 주세욤">
+        <br>
+        &nbsp<b>작성자</b> <input type="text" placeholder="작성자를 입력해주세욤">
+        <br><br>
+        <b>내용</b><br>
+        <textarea name="" id="" cols="50" rows="10" placeholder="내용을 입력해주세욤"></textarea>
+        <br>
+        첨부파일 <input type="file"><br><hr>
+        <button type="submit">글쓰기</button> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button type="submit">취소</button>
+        </form>
+
+         <Hr>
+
+
+        <h1>게시판 글쓰기 페이지</h1>
+        <table border="1">
+            <tr>
+                <td>제목</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <Td colspan="2">내용</Td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <textarea cols="50" rows="40"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>첨부파일</td> 
+                <td> <input type="fill"> </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="">글쓰기</button></td>
+                <td><button type="">취소</button></td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>kakao</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+출처: https://web-atelier.tistory.com/16 [웹아틀리에 - Web atelier]
+
+    *{margin: 0;
+    padding: 0;}
+    header{
+        width: 100%;
+        height: 70px;
+       
+    }
+    section{
+        float: left;
+        width: 100%;
+        height: 1500px;
+        border: 1px solid;
+        box-sizing: border-box;
+    }
+    h1{
+        width: 580px;
+        height: 40px;
+        
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    article{
+        width: 580px;
+        height: 1000px;
+        border: 1px solid rgba(128, 128, 128, 0.473);
+        margin: 0 auto; 
+        box-sizing: border-box;
+    }
+    h3{
+        margin-left:50px;
+        margin-top:50px;
+       
+    }
+    .id1{
+        margin-top:30px;
+        margin-left: 50px;      
+    }       
+    div.id1{
+        font-size: 13px;
+    }
+    .id2{
+        width: 440px;
+        height: 32px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    ul{
+        font-size: 12px;
+        
+    }
+    li{
+        padding: 3px 0px;
+    }
+    .list{
+        
+        margin-left: 65px;
+        margin-top: 20px;
+        width: 500px;
+        height: 90px;
+    }
+    .pa{
+        margin-top: 10px;
+        margin-left:50px;
+    }
+    .pass{
+        width: 440px;
+        height: 32px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 17px;
+        font-weight: bold;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .name{
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .nick{
+        width: 440px;
+        height: 32px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 17px;
+        font-weight: bold;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .num{
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .number{
+        width: 355px;
+        height: 32px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 17px;
+        font-weight: bold;
+        opacity: 0.6;
+        cursor: pointer;
+        
+    
+    }
+    select{
+        width:85px;
+        height: 32px;
+        border: 1px solid rgba(128, 128, 128, 0.473);
+        border-top: none;
+        border-left: none;
+        text-align: center;
+    }
+    select:active{
+        text-decoration: none;
+        border: none;
+    }
+    input:active{
+        border-style: none;
+        text-decoration: none;
+        
+    }
+    button{
+        margin-left: 50px;
+        margin-top: 30px;
+        width: 200px;
+        height: 35px;
+        background-color: white;
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.185);
+    }
+    .daum{
+        width:440px;
+        height: 35px;
+        border: 1px solid rgba(0, 0, 0, 0.185);
+        margin-left: 50px;
+        margin-top: 30px;
+        text-align: center;
+        line-height: 35px;
+        background-color: rgba(0, 0, 0, 0.185);
+        border-radius: 5px;
+        
+    }
+    .aaa{
+        text-decoration: none;
+        color: black;
+        display: block;
+        opacity: 0.7;
+        font-size: 14px;
+    }
+    .birth{
+        width: 440px;
+        height: 100px;
+        border: 1px solid black;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .birth2{
+        margin-right: 35px;
+        padding-bottom: ;
+    }
+    
+</style>
+</head>
+<body>
+<header></header>
+
+<section>
+    <h1>KaKao</h1>
+    <article>
+        <h3>카카오계정 정보를 입력해 주세요.</h3>
+        
+        <div class="id1">카카오계정 이메일
+        <br class="id3">
+        <input type="id" placeholder="아이디 입력" class="id2">
+        
+       
+        </div>
+
+       <div class="list">
+         <ul>
+            <li>입력한 카카오메일로 카카오계정에 로그인할 수 있습니다</li>
+            <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해 주세요.</li>
+            <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+        </ul>
+    </div>
+
+        
+        
+    <div class="pa">
+     <h4>비밀번호</h4>  
+     <Br>
+     <input type="text" placeholder="비밀번호(8~32)자리" class="pass">
+     <br>
+     <input type="text" placeholder="비밀번호 재입력" class="pass">
+    </div>
+    
+    <div class="name">
+     <h4>닉네임</h4>
+     <br>
+     <input type="text" placeholder="닉네임을 입력해 주세요" class="nick" >
+    </div>
+     
+   
+   
+    <div class="num">
+
+     <h4>전화번호</h4>
+
+     <br>
+     <select name="" id="">
+         <option value="">+82</option>
+         <option value="">010</option>
+         <option value="">011</option>
+     </select>
+     <input type="number" placeholder="전화번호" class="number">
+     
+    </div>
+
+    <button>인증번호 전송</button>
+     
+    <div class="daum">
+    <a href="#" class="aaa">다음</a>
+    </div>
+    
+    <div class="birth">
+
+    <h4>생일/성별</h4>
+    
+    <span class="birth2">
+        <select name="" id="">
+        <option value="">연도</option>
+        <option value="">2012</option>
+        <option value="">2013</option>
+        </select>
+    </span>
+    <span class="birth2">
+        <select name="" id="">
+        <option value="">월</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        </select>
+    </span>
+    <span class="birth2">
+        <select name="" id="">
+        <option value="">일</option>
+        <option value="">1</option>
+        <option value="">29</option>
+        </select>
+    </span>
+        <input type="checkbox" class="check">음력
+   
+    </div>
+    
+
+
+</article>
+</section>
+</body>
+</html>

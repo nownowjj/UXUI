@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    *{margin: 0;
+     padding: 0;
+    }
+div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.box1{/* 상하좌우 동일하게 넣는 경우 */
+    margin:30px;
+}
+
+.box2{/* (상하)(좌우)넣는 경우 */
+    margin: 20px 40px;
+}
+.box3{
+    margin:10px 20px 30px ;
+}         /*상  좌우  하*/
+.box4{
+    margin:10px 20px 30px 40px ;
+}         /*상  우   하    좌*/
+.box5{
+    margin:20px auto ;/*가운데 정렬*/
+    
+}          /*inline(글자로 취급하는 것만) block 형태는 X*/
+
+.sub{
+    width: 50px;
+    height: 50px;
+    margin: 20px auto; /*block 형태 태그를 가운데 정렬은 좌우 정렬값을 auto */
+}
+p{
+    border: 1px solid black;
+    margin-left: 10px;   /*left right 등등 단일 선택도 가능합니당*/
+}
+</style>
+
+</head>
+<body>
+     
+   <div class="box1"></div>          <hr>
+   <div class="box2"></div> <hr>
+   <div class="box3"></div> <hr>
+   <div class="box4"></div> <hr>
+   <div class="box5">박스 가운데 정렬
+    <div class="sub"></div>
+   </div> <hr>
+    <p> 블럭 태그 영역</p>
+    
+</body>
+</html>

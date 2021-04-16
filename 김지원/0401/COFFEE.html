@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>세로메뉴 layout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+
+</script>
+
+<STYLE>*{margin: 0;
+         padding:0;
+         box-sizing: border-box;}
+
+ul{
+    list-style: none;
+}
+
+.left-menu ul li{
+    margin-top:40px;
+}
+.im1{
+    background-image:url(/0401/img/iconfinder_coffee-cup-2_430091.png) ;
+    background-repeat: no-repeat;
+    background-size:40px;
+}
+.left-menu a{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    border: 1px solid;
+    margin: 10px;
+}
+
+.left-menu{
+    width: 60px;
+    height: 1040px;
+    float: left;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(165, 42, 42, 0.767);
+}
+header{
+    width: 1860px;
+    height: 500px;
+    
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 60px;
+    background-image: url(/0401/img/coffee-2242213_1920.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    color:white;
+}
+
+@keyframes movebg{
+    0%{
+            margin-left:0px
+        }
+        50%{
+            margin-left: 885px;
+        }
+        100%{
+            margin-left: 1845px;
+        }
+}
+
+H2{
+    animation: movebg 10s linear infinite;
+    margin-left: 200px;
+    font-size: 35px;
+    margin-top: 150px;
+    animation-direction: alternate ;
+}
+.main-menu{
+    width: 1860px;
+    height: 50px;
+    
+    box-sizing: border-box;
+    float: left;
+    margin-left: 60px;
+    margin-right: 0px;
+}
+section{
+    margin-bottom: 30px;
+    width: 1860px;
+    height: 1040px;
+    
+    box-sizing: border-box;
+    float: left;
+    margin-left: 60px;
+}
+ul{
+    text-align: center;
+}
+.main-menu a{
+    width: 371.5px;
+    height: 50px;
+    border:none;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.main-menu a:hover{
+    font-size: 30px;
+    background-color: rgba(165, 42, 42, 0.116);
+    border-radius: 30px;
+}
+.co1{
+    background-image: url(/0401/img/coffee-15994_1920.jpg);
+    background-repeat: no-repeat;  
+    background-size: 100%;  
+}
+.co2{
+    background-image: url(/0401/img/notebook-1280538_1920.jpg);
+    background-repeat: no-repeat;  
+    background-size: 100%;  
+}
+.co3{
+    background-image: url(/0401/img/blank-792125_1920.jpg);
+    background-repeat: no-repeat;  
+    background-size: 100%;  
+}
+.co4{
+    background-image: url(/0401/img/notebook-731212_1920.jpg);
+    background-repeat: no-repeat;  
+    background-size: 100%;  
+}
+footer{
+    margin-left: 60px;
+    width: 1860px;
+    height: 200px;
+    float: left;
+    background-color: rgba(128, 128, 128, 0.295);
+
+}
+
+</STYLE>
+</head>
+<body>
+<nav class="left-menu">
+    <ul>
+        <li><a href="#se0" class="im1"> </a></li>
+        <li><a href="#se1" class="im1"> </a></li>
+        <li><a href="#se2" class="im1"> </a></li>
+        <li><a href="#se3" class="im1"> </a></li>
+        <li><a href="#se4" class="im1"> </a></li>
+    </ul>
+</nav>
+
+<header><a id="se0"><div><h2>COFFEE</h2></div></a></header>
+
+<nav class="main-menu">
+    <ul>
+        <li><a href="#"> HOME</a></li>
+        <li><a href="#"> COFFEE</a></li>
+        <li><a href="#"> CF</a></li>
+        <li><a href="#"> PRINT</a></li>
+        <li><a href="#"> 문의하기</a></li>
+    </ul>
+</nav>
+<section class="co1"><a id="se1"></a></section>
+<section class="co2"><a id="se2"></a></section>
+<section class="co3"><a id="se3"></a></section>
+<section class="co4"><a id="se4"></a></section>
+  <footer>
+      
+  </footer>
+</body>
+</html>

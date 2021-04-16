@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+       window.onload=function(){
+           //이미지 태그 선택
+           var img=document.getElementsByTagName("img")[0];
+           alert(img.src);
+           img.onload=function(){
+               alert("img load")
+           };
+       }
+     function imgLoad(){
+         alert("imgLoad");
+     }
+     
+    </script>
+<style>
+    
+</style>
+</head>
+
+<body>
+    <h1>onload 이벤트 테스트</h1>
+    <img src="/img2/cherry-blossoms-1317308_1920.jpg" onload="imgLoad() ">
+    <h2>h2 영역</h2>
+</body>
+
+</html>

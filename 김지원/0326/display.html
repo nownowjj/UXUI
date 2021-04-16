@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>display</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    img{width: 200px;
+    height: 100px;}
+    /* 태그가 inline, block으로 구분을 하는데,
+       태그를 inline, block 등 다른 형태로 변경을 할때 사용하는 CSS가 display
+       inline, block, inline-block, none */
+    a{ width: 100px;
+       height: 50px;
+       border: 1px solid black;
+       padding: 0px;    
+       }
+    .img1{
+        /* display:none; */
+        visibility: hidden;
+    }   
+    *{ margin: 0;
+       padding: 0;}
+
+    ul{font-size: 0px;}
+    
+    li{ border: 1px solid black;
+        width:100px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+    }
+    .menu_a{
+        width: 100%;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 17px 5px;
+        color: black;
+        text-decoration: none;
+        display: inline-block;
+        box-sizing: border-box;
+        }
+</style>
+
+</head>
+<body>
+    <ul>
+        <li><a href="#" class="menu_a">항목1</a></li>
+        <li><a href="#" class="menu_a">항목2</a></li>
+        <li><a href="#" class="menu_a">항목3</a></li>
+        <li><a href="#" class="menu_a">항목4</a></li>
+        <li><a href="#" class="menu_a">항목5</a></li>
+        
+    </ul>
+    
+    <hr>
+
+    <h2>display: none, visiblity: hidden 차이</h2> 
+
+    <img src="/0319/날씨2.png" class="img1">
+    <img src="/0319/날씨2.png">
+</body>
+</html>

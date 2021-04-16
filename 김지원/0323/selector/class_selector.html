@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>클래스 선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /*
+     1.table,th,td 선택자를 이용해서 선택
+     여백,테두리 설정
+     */
+        table {
+            border-collapse: collapse;
+            /*셀과 셀사이에 여백 삭제*/
+
+        }
+
+        th {
+            padding: 5px;
+            /*th,td 묶어서하면 그룹 선택자가 됨*/
+            border: 1px solid black;
+
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid black;
+
+        }
+
+        /*클래스 선택자
+      미리 CSS로 디자인을 만든 후에
+      해당 디자인이 필요한 태그에게 디자인을 적용하는 방식
+      */
+
+        /*.클래스 속성값{CSS 디자인}*/
+        .red {
+            color: red;
+        }
+
+        /*미리 도장을 만들어놓고 필요한 곳에서 가져다 쓰는 방식*/
+        
+        /* 클래스 선택자 under를 지정한 후 under는 밑줄만 설정 */
+       .under{
+           text-decoration: underline;
+       }
+       #blue{
+           color: blue;
+       }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <td>1</td>    <!--class에 두개의css를 실행하려면 뛰어쓰기하고 입력-->
+                <td class="red under">여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다.</td>
+                <td>의자왕</td>
+            </tr>
+
+            <tr>                     <!--class와 id중 id가 우선-->
+                <td>2</td>
+                <td class="red">국교는 인정되지 아니하며, 종교와 정치는 분리된다. 비상계엄이 선포된 때에는 법률이 정하는 바에 의하여 영장제도, 언론·출판·집회·결사의 자유, 정부나 법원의 권한에 관하여 특별한
+                    조치를 할 수 있다.</td>
+                <td>이담지</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.</td>
+                <td>황희</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td class="under">명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.</td>
+                <td>관창</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td class="under">정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.</td>
+                <td>문무왕</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

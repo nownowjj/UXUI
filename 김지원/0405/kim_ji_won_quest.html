@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        .left_menu{
+            width:60px;
+            height:1000px;
+            box-sizing: border-box;
+            
+            position: fixed;
+            left: 0px;
+            top: 0px;
+        }
+        .left_menu img{
+            width: 30px;
+            height: 30px;
+        }
+        .left_menu li{
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            margin-top:40px;
+            margin-left: 15px;
+            list-style-type: none;
+            box-sizing: border-box;
+            border-collapse: collapse;
+        }
+        header{
+            
+            width: 1860px;
+            height: 300px;
+            
+            margin-left:60px;
+            box-sizing: border-box;
+            background-image:url(/0405/quest/header_img.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .main_menu{
+            width: 1860px;
+            height: 50px;
+            box-sizing: border-box;
+            margin-left: 60px;
+            
+            text-align: center;
+            border-bottom: 3px solid #e8e8e8;
+        }
+
+        section{
+            width: 1860px;
+            height: 700px;
+            
+            margin-left: 60px;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .main_menu ul{
+            display: inline-block;
+        }
+        .main_menu li{
+            width: 300px;
+            height: 50px;
+            float: left;
+            
+            box-sizing: border-box;
+        }
+        .main_menu a{
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 50px;
+            font-weight: bold;
+            display: block;
+            color: black;
+        }
+    h2{
+        text-align: center;
+        margin-top: 50px;
+        font-size:30px ;
+        height: 60px;
+    }
+    table{
+        margin: 0 auto;
+        
+    }
+    #title{
+        width: 250px;
+    }
+    #name{
+        width: 250px;
+    }
+    #mail{
+        width: 150px;
+    }
+    .right{
+        float: right;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    input{
+        height: 30px;
+        margin-left: 5px;
+        font-weight: bold;
+        border:2px solid #e8e8e8;
+        border-radius:5px;
+        outline: none;
+    }
+    .top{
+        margin-top: -98%;
+    }
+    textarea{
+        font-weight: bold;
+        margin-left: 5px;
+        border: 2px solid #e8e8e8;
+        border-radius: 5px;
+        outline: none;
+    }
+    label{
+        padding: 10px;
+    }
+    select{
+        width: 150px;
+        height: 30px;
+        border:2px solid #e8e8e8;
+        border-radius:5px;
+        outline: none;
+    }
+
+        
+    
+    span{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    button{
+        background-color: rgba(0, 153, 255, 0.849);
+        width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        float: right;
+        color: white;
+        font-weight: bold;
+    }
+  
+   .left{
+       float: left;
+   }
+
+    </style>
+</head>
+<body>
+    <nav class="left_menu">
+        <ul>
+            <li><a href="#"><img src="/0405/quest/home.png" alt="메인 페이지 아이콘"></a></li>
+            <li><a href="#"><img src="/0405/quest/cup.png" alt=""></a></li>
+            <li><a href="#"><img src="/0405/quest/picture.png" alt=""></a></li>
+            <li><a href="#"><img src="/0405/quest/tv.png" alt=""></a></li>
+            <li><a href="#"><img src="/0405/quest/headphone.png" alt="드가자"></a></li>
+        </ul>
+    </nav>
+
+    <header></header>
+    
+    <nav class="main_menu">
+        <ul>
+            <li><a href="">HOME</a> </li>
+            <li><a href="">COFFEE</a> </li>
+            <li><a href="">CF</a> </li>
+            <li><a href="">PRINT</a> </li>
+            <li><a href="">문의하기</a> </li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>제품 문의하기</h2>
+    <form action="" method="GET">
+        <table >
+            
+          <tr>
+              <td><label for="title" class="right">제목</label></td>
+              <td><input type="text" name="title" id="title" placeholder="제목을 입력해주세요" minlength="1" required></td>
+          </tr>
+          <tr>
+              <td><label for="name" class="right">작성자</label></td>
+              <td><input type="text" name="name" id="name" placeholder="작성하신분 성함을 입력해주세요" minlength="2"></td>
+          </tr>
+          <tr>
+              <td><label for="mail" class="right">답변받을 이메일</label></td>
+              <td><input type="text" name="mail" id="mail" placeholder="이메일 주소" minlength="2"><span>@</span><select name="gmail" id="gmail">
+                  <option value="#">gmail.com</option>
+                  <option value="#">naver.com</option>
+                  <option value="#">직접입력</option>
+              </select></td>
+          </tr>
+          <tr>
+               <td><label for="ask" class="right top">문의내용</label></td>
+               <td><textarea name="ask" id="ask" cols="50" rows="20" placeholder="배고프다 엉엉" minlength="1"></textarea></td>
+          </tr>
+        
+          <tr>
+              <td colspan="1"><button  type="submit" value="문의하기" class="right_btn left">문의하기</button></td>
+              <td><button value="초기화" type="reset" class="right_btn">초기화</button></td>
+          </tr>
+        </table>
+    </form>
+    </section>
+   
+
+</body>
+</html>

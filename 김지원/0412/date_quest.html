@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>날짜 계산</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<!--2021년 11월 18일 목 수능 얼마나 남았는지 풀어봄-->
+<script>
+  var today=new Date("2021-04-12 00:00:00");
+  var sooday=new Date("2021-11-18 00:00:00");
+
+  var dday=(sooday.getTime()- today.getTime())/(1000*60*60*24);
+
+  document.write("수능까지 앞으로"+dday+"일 남았습니다");
+</script>
+</head>
+<body>
+    
+</body>
+</html>
