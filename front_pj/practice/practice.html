@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>practice</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <style>
+      *{margin: 0; padding: 0; box-sizing: border-box;}
+      .container{
+          width: 1200px;
+          height: 700px;
+          /* border: 1px solid; */
+          margin: 0 auto;
+      }
+      a{
+          text-decoration: none;
+          color: black;
+      }
+      ul{
+          list-style: none;
+      }
+      .header{
+          width: 100%;
+          height: 100px;
+          border: 1px solid;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          z-index: 2;
+      }
+      .logo{
+          width: 200px;
+          height: 100%;
+          border: 1px solid;
+          text-align: center;
+          line-height: 100px;
+      }
+      .menu{
+          position: absolute;
+          top: 40%;
+          right: 50px;
+          text-align: center;
+          border: 1px solid;
+          width: 500px;
+          z-index: 3;
+          background: #fff;
+        }
+        .main-menu{
+            width: 25%;
+            /* height: 30px; */
+            line-height: 30px;
+            float: left;
+        }
+        .main-menu:hover{
+            background: lightblue;
+        }
+        .main-menu:hover > .sub-menu {
+            background: white;
+      }
+      .main-menu:hover > .sub-menu li:hover{
+          background:blue;
+        }
+      .main-menu a{
+          display: block;
+        }
+        .sub-menu{
+            display: none;
+        }
+        .sub-menu li{
+            width: 100%;
+        }
+        .sub-menu li a{
+            display: block;
+            /* background: black; */
+        }
+        .slide{
+            width:1200px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide .slide-all{
+            width: 3600px;
+            height: 100%;
+            position: relative;
+        }
+        .slide .slide-all li{
+            width: 1200px;
+            height: 100%;
+            float: left;
+            border: 1px solid;
+        }
+        .slide .slide-all li img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+        .slide button{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 50px;
+            font-weight: bold;
+            z-index: 1;
+            color: red;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #pre{
+            top: 250px;
+        }
+        #next{
+            top:250px;
+            left: 1150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">logo-img</div>
+            <div class="menu">
+                <ul>
+                    <li class="main-menu"><a href="#">회사소개</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">조직구성도</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">사업영역</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">전원주택</a></li>
+                        <li><a href="#">도시재생</a></li>
+                        <li><a href="#">인테리어</a></li>
+                    </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">입주정보</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">입주단지</a></li>
+                        <li><a href="#">입주캘린더</a></li>
+                    </ul>
+                    </li>
+                    <li class="main-menu"><a href="#">고객센터</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">건축상담</a></li>
+                        <li><a href="#">홍보자료실</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide">
+            <ul class="slide-all">
+                <li><img src="/img/img1.PNG" alt=""></li>
+                <li><img src="/img/img2.PNG" alt=""></li>
+                <li><img src="/img/img3.PNG" alt=""></li>
+            </ul>
+            <button id="pre"><</button>
+            <button id="next">></button>
+        </div>
+        
+    </div>
+    <script>
+        $(function(){
+            $(".main-menu").hover(function(){
+                $(".main-menu > .sub-menu").stop().slideDown(500);
+                $(".menu").mouseleave(function(){
+                    $(".sub-menu").stop().slideUp(300);
+                })
+            })
+
+
+
+
+            function pre(){
+          $(".slide-all >li:last-child").css("margin-left",-width+"px");
+          $(".slide-all").prepend($(".slide-all > li:last-child"));
+          $(".slide-all >li:first-child").animate({
+            "margin-left":"0px"
+        },100);
+        }
+        function next(){
+            $(".slide-all > li:first-child").animate({
+                    "margin-left" : -width + "px"
+                },100,function(){
+                    $(".slide-all").append($(this));
+                   $(this).css("margin-left","0px");
+                });
+        }
+            
+        var width;
+
+            //다음 슬라이드 전환
+            $("#next").click(function(){
+                next();
+            });
+            //이전 슬라이드 전환
+            $("#pre").click(function(){
+                pre();
+            });
+
+        })
+    </script>
+</body>
+</html>

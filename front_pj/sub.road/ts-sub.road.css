@@ -1,0 +1,152 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+:root{
+  font-size: 10px;
+}
+body{
+  height: 100%;
+}
+.head-nav{
+  padding: 1.5rem 10rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  /* border-bottom: 1px solid; */
+}
+.fa-hammer{
+  font-size: 3rem;
+}
+.head-nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+}
+.logo-ul, .menu-ul{
+  display: flex;
+}
+.head-nav .menu-ul li{
+  margin-left: 2.5rem;
+}
+.logo-ul li{
+  margin-right: 1.2rem;
+  font-size: 2.4rem;
+}
+a:link,a:visited{
+  /* display: block; */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+}
+.menu-ul li a:hover{
+ color: black;
+ font-weight: bold;
+ transform: scale(1.1);
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.navbar__toggleBtn{
+  display: none;
+  position: absolute;
+  right: 3.2rem;
+  font-size: 2.5rem;
+  color: black;
+}
+.container{
+  /* border: 1px solid; */
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem 10rem;
+
+}
+.info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #F7F9FA;
+  border-bottom: 1px solid #e8e8e8;
+}
+#map{
+  width: 50%;
+  height: 50rem;
+}
+.map-info{
+  border-radius: 50%;
+  display: inline-block;
+}
+.road-info{
+font-size: 1.6rem;
+right: 15%;
+}
+ul{
+  list-style: none;
+}
+.foot{
+  position: relative;
+  margin-top: 3rem;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 2rem;
+  background: #F7F9FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.foot ul{
+  list-style: none;
+  margin: 1rem;
+}
+/* 미디어쿼리 */
+@media screen and (max-width:768px) {
+  .head-nav{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.3rem;
+    /* padding: 8px 24px; */
+  }
+  .menu-ul{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .menu-ul li :active{
+    width: 100%;
+    text-align: center;
+    background: #fafafa;
+    padding: 0;
+  }
+  .navbar__toggleBtn{
+    display: block;
+  }
+  .menu-ul.active,
+  .navbar__icons.active{
+    display: flex;
+  }
+  .container{
+    flex-direction: column;
+    padding: 0;
+  }
+  #map{
+    width: 90%;
+    margin-bottom: 5rem;
+  }
+  .foot{
+    flex-direction: column;
+  }
+
+}

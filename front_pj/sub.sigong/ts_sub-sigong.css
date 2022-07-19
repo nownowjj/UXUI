@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	/* min-height: 100vh; */
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.gallery {
+  position: absolute;
+  top: 49.1rem;
+  /* border: 1px solid; */
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;    
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	/* box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4); */
+	overflow: hidden;
+  /* min-height: 27rem; */
+  /* min-width: 24rem; */
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+  min-height: 27.5rem;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+  
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		/* grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr)); */
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+        position: relative;
+	}
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.head-nav{
+  margin: 0;
+  padding: 1.5rem 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  /* border-bottom: 1px solid; */
+}
+.fa-hammer{
+  font-size: 3rem;
+}
+.head-nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+}
+.logo-ul, .menu-ul{
+  display: flex;
+}
+.head-nav .menu-ul li{
+  margin-left: 2.5rem;
+}
+.logo-ul li{
+  margin-right: 1.2rem;
+  font-size: 2.4rem;
+}
+a{
+  /* display: block; */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.menu-ul li a:hover{
+ color: black;
+ font-weight: bold;
+ transform: scale(1.1);
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.navbar__toggleBtn{
+  display: none;
+  position: absolute;
+  right: 3.2rem;
+  font-size: 2.5rem;
+  color: black;
+}
+.sigong{
+  width: 100%;
+  left: 0;
+  top: 6.2rem;
+  position: absolute;
+  /* border: 1px solid; */
+  height: 40rem;
+  background-image: url(/ts-img/architecture-3588171_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 7rem;
+}
+@media screen and (max-width:768px) {
+  .head-nav{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .menu-ul{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .menu-ul li{
+    width: 100%;
+    text-align: center;
+    background: #fafafa;
+  }
+  .navbar__toggleBtn{
+    display: block;
+  }
+  .menu-ul.active,
+  .navbar__icons.active{
+    display: flex;
+  }
+   /* 디바이스가 모바일로 변환시 갤러리 아이템은 최소 2개까지만 */
+   .gallery{
+     display: grid;
+     grid-template-columns: repeat(2, minmax(15.35rem, 1fr));
+     grid-gap: 1rem;
+    }
+    .sigong{
+      top: 4.8rem;
+      height: 20rem;
+    }
+    .gallery{
+      top: 27rem;
+    }
+    .gallery-item-text span{
+      font-size: 1rem;
+    }
+    .gallery-image{
+      min-height: 16rem;
+    }
+    /* 디바이스가 모바일로 변환시 갤러리 아이템은 최소 2개까지만 */
+
+
+
+}
+.gallery-item-text{
+  /* border-bottom: 1px solid black; */
+    background: rgba(255, 255, 255, 0.466);
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-item-text span{
+    color: black;
+}
+.gallery-item:hover > .gallery-item-text{
+  background:rgba(255, 255, 255, 0.705) ;
+}
+.foot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

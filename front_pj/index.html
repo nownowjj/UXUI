@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Kim ji won portfolrio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var elm = ".container";
+        $(elm).each(function (index) {
+          // 개별적으로 Wheel 이벤트 적용
+          $(this).on("mousewheel DOMMouseScroll", function (e) {
+            e.preventDefault();
+            var delta = 0;
+            if (!event) event = window.event;
+            if (event.wheelDelta) {
+              delta = event.wheelDelta / 120;
+              if (window.opera) delta = -delta;
+            } else if (event.detail) delta = -event.detail / 3;
+            var moveTop = $(window).scrollTop();
+            var elmSelecter = $(elm).eq(index);
+            // 마우스휠을 위에서 아래로
+            if (delta < 0) {
+              if ($(elmSelecter).next() != undefined) {
+                try {
+                  moveTop = $(elmSelecter).next().offset().top;
+                  $(elmSelecter).next().addClass("move"); //  휠 내렸을시 애니메이션 이벤트
+                } catch (e) {}
+              }
+              // 마우스휠을 아래에서 위로
+            } else {
+              if ($(elmSelecter).prev() != undefined) {
+                try {
+                  moveTop = $(elmSelecter).prev().offset().top;
+                } catch (e) {}
+              }
+            }
+
+            // 화면 이동 0.8초(800)
+            $("html,body")
+              .stop()
+              .animate(
+                {
+                  scrollTop: moveTop + "px",
+                },
+                {
+                  duration: 800,
+                  complete: function () {},
+                }
+              );
+          });
+        });
+      };
+    </script>
+    <!-- 스크롤 이벤트 스크립트 -->
+    <style>
+        .swiper-container {
+        width: 70%;
+        height: 60%;
+        position: relative;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        /* display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; */
+        background-size: 100% 100%;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 1.5);
+        /* overflow: visible !important; */
+        /* overflow-x: clip !important; */
+      }
+     .portfolrio{
+         position: absolute;
+         top: 5%;
+         font-size: 2.4rem;
+     }
+    .swiper2{
+        
+        width: 50%;
+        height: 10%;
+        bottom: 5%;
+        position: absolute;
+        color: black;
+        box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 1.5);
+     }
+     .about-page{
+       width: 40rem;
+       height: 50rem;
+       border: 1px solid;
+       position: fixed;
+       top: 30% ;
+       right: -38.5rem;
+       /* right: 0rem; */
+       z-index: 999999;
+       transition: 1s;
+       background: #79bbff;
+       border: none;
+       border-bottom-left-radius: 1rem;
+       border-bottom-right-radius: 1rem;
+       padding-left: 1.5rem;
+       
+     }
+     .open-btn{
+       width: 6rem;
+       height: 3rem;
+       text-align: center;
+       font-size: 1.8rem;
+       line-height: 2rem;
+       position: absolute;
+       top: 0;
+       left: -6rem;
+       background:#79bbff;
+       color: #ffffff;
+       cursor: pointer;
+       border: none;
+       border-top-left-radius: 0.6rem;
+       border-bottom-left-radius: 0.6rem;
+       z-index: 99999;
+     }
+     .close-btn{
+       position: absolute;
+       width: 2rem;
+       right: 1rem;
+       top: 0rem;
+       color: #ffffff;
+       border: none;
+       background: none;
+       font-size: 2.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2;
+      animation: move 1.5s linear infinite;
+     }
+     @keyframes move{
+       0%{transform: translateY(0px);}
+       50%{transform: translateY(-3.5px);}
+       100%{transform: translateY(0px);}
+     }
+     .rigth{
+       right: 0rem;
+     }
+     .about-page section{
+       width: 100%;
+       height: 100%;
+       font-size: 1.6rem;
+       padding-top: 20%;
+       color: #ffffff;
+     }
+     .about-page section table{
+       width: 100%;
+     }
+     .about-page section table img{
+       width: 30rem;
+       height: 23rem;
+     }
+    </style>
+  </head>
+  <body>
+      <header>
+        <span>JI Won</span>
+        <ul>
+          <li><a href="#container">Main</a></li>
+          <li><a href="#container2">Portfolio</a></li>
+          <li><p style="color: white; cursor: pointer;" class="link-about"> About</p></li>
+        </ul>
+      </header>
+      <div class="about-page">
+        <button class="open-btn">About!</button>
+        <button class="close-btn">X</button>
+        <section>
+          <table>
+            <div style="width: 100%; text-align: center; position: absolute; top: 0; left: 0; font-size: 2.4rem;" >Frontend developer</div>
+            <tr>
+              <td>Name</td>
+              <td>Kim Ji Won</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>010-9647-1545</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>sbddr3@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>Gyeonggi-do, Gwangmyeong</td>
+            </tr>
+            <tr>
+              <td>Skill</td>
+              <td class="skill-img">
+                <img src="/img/Group 2.png" alt="">
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    <div class="container" id="container">
+        <div class="sns">
+            <a href="https://www.facebook.com/nownowjj/"><img src="img/facebook.png" alt="" /></a>
+            <a href="https://www.instagram.com/nownowjj"><img src="img/instagram.png" alt="" /></a>
+        </div>
+        
+      <div class="section">
+        <div class="main-text">
+          <h2>Hi,I'm Jiwon<span class="myname">!</span></h2>
+          <h4>Frontend developer</h4>
+          <h5>development knowledge,<br />producing quality work</h5>
+          <button id="btn">More profile</button>
+        </div>
+        <div class="main-img">
+          <img
+            id="profile-img"
+            src="img/KakaoTalk_20210601_154049611-removebg-preview.png"
+            data-src2="img/KakaoTalk_20210601_130021572.jpg"
+          />
+        </div>
+      </div>
+    </div>
+<!-- continaer2 start -->
+<!-- continaer2 start -->
+    <div class="container" id="container2">
+     
+        <!-- Swiper -->
+        <div class="portfolrio"><p>portfolrio</p></div>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(img/img1.PNG); background-position: center;"><div class="inner"></div><div class="swiper-slide-info"><p><a href="/ts-main/ts-main.html" target="_blank" title="ts사이트">사이트 이동하기</a></p></div></div>
+          <div class="swiper-slide" style="background-image: url(img/img2.PNG); background-position: center; "><div class="inner inner2"></div><div class="swiper-slide-info"><p><a href="/flower/flowerdrop.html" target="_blank" title="flower 사이트">사이트 이동하기</a></p></div></div>
+          <div class="swiper-slide" style="background-image: url(img/img3.PNG); background-position: center; "><div class="inner inner3"></div><div class="swiper-slide-info"><p><a href="/starbucks/starbucks.html" target="_blank" title="starbucks clone 사이트">사이트 이동하기</a> </p></div></div>
+          <!-- <div class="swiper-slide" style="background-image: url(portimg/img3.PNG); background-position: center;"><a href="#" style="width: 100%; height: 100%;  display: block;"></a></div> -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+<!-- container3 start -->
+<!-- container3 start -->
+<!-- <div class="container"></div> -->
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <!-- Swiper JS -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+        //  $(".swiper2, swiper-container").swiper(function(){});
+
+       var swiper = new Swiper(".mySwiper , .swiper2", {
+         slidesPerView: 1,
+         spaceBetween: 30,
+         loop: true,
+         loopAdditionalSlides : 1, //슬라이드 반복시 마지막 슬라이드에서 다음 슬라이드 안보이는 오류 수정
+         autoplay:{
+             delay:3500,
+         },
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         },
+         navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+         },
+       });
+     </script>
+  </body>
+</html>

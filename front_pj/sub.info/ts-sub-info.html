@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>TS 소개</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/sub.info/ts-sub-info.css'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+  <div class="head-nav">
+    <a href="/ts-main/ts-main.html">
+      <ul class="logo-ul">
+        <li><i class="fas fa-hammer"></i></li>
+        <!-- <li><img src="/portfolrio/ts/ts-img/Group 3 (1).png" alt=""></li> -->
+        <li>태성건영</li>
+      </ul>
+    </a>
+    <ul class="menu-ul" >
+      <li><a href="/sub.info/ts-sub-info.html">회사소개</a></li>
+      <li><a href="/sub.road/ts-sub-road.html">오시는길</a></li>
+      <li><a href="/sub.sigong/ts_sub_sigong.html">시공사례</a></li>
+      <li><a href="/sub.cum/ts-sub-cum.html">커뮤니티</a></li>
+    </ul>
+    <a href="#" class="navbar__toggleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </div>
+  <!-- 여기까지 메뉴 -->
+  <div class="info">
+    <h1>Proflie</h1>
+    <p>회사소개</p>
+  </div>
+  <div class="container">
+    <section><img src="/ts-img/cap2.PNG" alt="">
+      <!-- <h2>기업개요</h2>
+      <article>
+        <div><i class="far fa-building"></i><h4>중소기업</h4><p>기업형태</p></div>
+        <div><i class="fas fa-user-minus"></i></i><h4>중소기업</h4><p>기업형태</p></div>
+        <div><i class="fas fa-won-sign"></i><h4>중소기업</h4><p>기업형태</p></div>
+      </article>
+      <ul>
+        <li>업종</li>
+        <li>기타 토목시설물 건설업</li>
+      </ul>
+      <ul>
+        <li>대표자명</li>
+        <li>OOO</li>
+      </ul>
+      <ul>
+        <li>기업주소</li>
+        <li>서울 강남구 자곡로 174</li>
+      </ul>
+      <ul>
+        <li>사업내용</li>
+        <li>일반건축공사,건축자재,각종엔지니어링 서비스,인테리어 디자인,시각디자인,기타 전문디자인,영상물디자인 및 제작</li>
+      </ul> -->
+    </section>
+    <section><img src="/ts-img/cap.PNG" alt=""></section>
+    <section>
+      <img src="/ts-img/cap3.PNG" alt="">
+      <img src="/ts-img/cap4.PNG" alt="">
+    </section>
+  </div>
+  <div class="foot">
+    <p> © Copyright 2021. All Rights Reserved</p>
+      <ul>
+        <li>(주)태성건영</li>
+        <li>사업자 등록번호:ooo-oooo-oooo</li>
+      </ul>
+      <ul>
+        <li>대표자:ooo</li>
+        <li>고객센터:00-0000-0000</li>
+        <li>이메일:00000@00000.com</li>
+       </ul>
+   </div>
+</body>
+<script>
+  window.onload=function(){
+  
+      const toggleBtn= document.querySelector(".navbar__toggleBtn");
+      const menu= document.querySelector(".menu-ul");
+      // const icons= document.querySelector(".navbar__icons");
+      
+      toggleBtn.addEventListener('click', ()=> {
+        menu.classList.toggle('active');
+        // icons.classList.toggle('active');
+      });
+    }
+  </script>
+</html>

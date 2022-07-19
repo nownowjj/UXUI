@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>TS 오시는길</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/sub.cum/ts-sub-cum.css'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+  <div class="head-nav">
+    <a href="/ts-main/ts-main.html">
+      <ul class="logo-ul">
+        <li><i class="fas fa-hammer"></i></li>
+        <!-- <li><img src="/portfolrio/ts/ts-img/Group 3 (1).png" alt=""></li> -->
+        <li>태성건영</li>
+      </ul>
+    </a>
+    <ul class="menu-ul" >
+      <li><a href="/sub.info/ts-sub-info.html">회사소개</a></li>
+      <li><a href="/sub.road/ts-sub-road.html">오시는길</a></li>
+      <li><a href="/sub.sigong/ts_sub_sigong.html">시공사례</a></li>
+      <li><a href="/sub.cum/ts-sub-cum.html">커뮤니티</a></li>
+    </ul>
+    <a href="#" class="navbar__toggleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </div>
+  <!-- 여기까지 메뉴 -->
+  <div class="info">
+    <h1>Community</h1>
+    <p>문의하기</p>
+  </div>
+  <div class="section">
+    <div class="form-box">
+    <form action="">
+      <ul>
+        <label for="nick">신청자 성함</label>
+        <input type="text" required  name="" id="nick">
+      </ul>
+      <ul>
+        <label for="phone">연락처</label>
+        <input type="number" required id="phone">
+      </ul>
+      <ul>
+        <label for="mail">이메일</label>
+        <input type="email" required id="mail">
+      </ul>
+      <ul>
+        <label for="address">주소</label>
+        <input type="text" required id="address">
+        </select>
+      </ul>
+      <ul>
+        <label for="date">공사예정일</label>
+        <input type="date" name="" id="date">
+      </ul>
+      <ul>
+        <label for="area">건물평형</label>
+        <input type="text" id="area">
+      </ul>
+      <ul>
+        <label for="money">예산</label>
+        <input type="text" id="money">
+      </ul>
+      <ul>
+        <label for="project">프로젝트 제목</label>
+        <input type="text" required id="project">
+      </ul>
+      <li class="last-li">
+        <label for="inner">세부내용</label>
+        <textarea name="" id="inner" ></textarea>
+      </li>
+      <li class="accept-li">
+        <p>개인정보처리방침</p>
+        <label for="yes">동의<input type="checkbox" id="yes"></label>
+        <label for="no">비동의<input type="checkbox" id="no"></label>
+      </li>
+     <button>문의하기</button>
+    </form>
+     </div> 
+  </div>
+  <div class="foot">
+    <p> © Copyright 2021. All Rights Reserved</p>
+      <ul>
+        <li>(주)태성건영</li>
+        <li>사업자 등록번호:ooo-oooo-oooo</li>
+      </ul>
+      <ul>
+        <li>대표자:ooo</li>
+        <li>고객센터:00-0000-0000</li>
+        <li>이메일:00000@00000.com</li>
+       </ul>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+  window.onload=function(){
+  
+      const toggleBtn= document.querySelector(".navbar__toggleBtn");
+      const menu= document.querySelector(".menu-ul");
+      // const icons= document.querySelector(".navbar__icons");
+      
+      toggleBtn.addEventListener('click', ()=> {
+        menu.classList.toggle('active');
+        // icons.classList.toggle('active');
+      });
+    }
+  </script>
+
+</html>
